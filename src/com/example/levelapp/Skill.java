@@ -25,7 +25,7 @@ public class Skill
 	// completeAction - completes action
 	public void completeAction(Action action)
 	{
-		
+		xp = xp + action.xp;
 	}
 	
 	// updateSkill - updates skill Values

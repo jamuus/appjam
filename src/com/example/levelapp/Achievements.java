@@ -26,7 +26,7 @@ public class Achievements
 	// checkDone - checks if Achievement is completed
 	public Boolean checkDone(String name)
 	{
-		
+		Boolean done = false;
 		// TO BE COMPLETED
 		return done;
 	}
@@ -51,7 +51,6 @@ public class Achievements
 	// checkDoneGoals - checks which goal was done
 	public Boolean checkDoneGoals(ArrayList<Achievement> goals)
 	{
-		Boolean done;
 		for (Achievement goal : goals)
 		{
 			// checks conditions
