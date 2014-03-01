@@ -8,5 +8,7 @@ public class Profile
 	
 	public Skills skills;
 	
+	public About about;
+	
 	
 }

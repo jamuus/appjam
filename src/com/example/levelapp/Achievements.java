@@ -8,4 +8,6 @@ public class Achievements
 	public ArrayList<Achievement> achievedchievs;
 	public int ap;
 	
+	public ArrayList<Achievement> goals;
+	
 }
