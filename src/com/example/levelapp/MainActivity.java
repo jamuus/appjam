@@ -3,6 +3,8 @@ package com.example.levelapp;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 
@@ -14,16 +16,39 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        Button button = (Button) findViewById(R.id.);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-            }
-        });
+        setupEventListeners();
         
         save();
         
         
+    }
+    
+    setupEventListeners()
+    {
+    	ImageButton toDoList = (ImageButton)findViewById(R.id.toDoList);
+        toDoList.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                // Perform action on click
+            }
+        });
+        ImageButton cheevs = (ImageButton)findViewById(R.id.achievements);
+        cheevs.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                // Perform action on click
+            }
+        });
+        ImageButton skeelz = (ImageButton)findViewById(R.id.skills);
+        skeelz.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                // Perform action on click
+            }
+        });
     }
 
     void save() {
