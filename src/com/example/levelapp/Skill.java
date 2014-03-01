@@ -12,14 +12,12 @@ public class Skill
 	public int xp;
 	public int level;
 	public ArrayList<Action> actions;
-	public LevelBoundaries levelBounds = new LevelBoundaries();
 
-	public Skill(SkillType name, int xp, int level)
+	public Skill(SkillType name, int xp)
 	{
 		actions = new ArrayList<Action>();
 		this.name = name;
-		this.xp = xp;
-		this.level = level; //levelBounds.getLevel(xp);
+		this.xp = xp;//levelBounds.getLevel(xp);
 	}
 	// skill Constructor
 //	public void initialiseAction()

@@ -17,8 +17,11 @@ public class Skills
 	
 	public void addSkill(SkillType name, int xp, int level)
 	{
-		Skill s = new Skill(name, xp, level);
+		Skill s = new Skill(name, xp);
 		skills.add(s);
 	}
-
+	public ArrayList<Skill> returnSkills()
+	{
+		return skills;
+	}
 }
