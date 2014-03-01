@@ -7,6 +7,18 @@ public class Skills
 	public ArrayList<Skill> skills;
 	public int totalLevel;
 	public int totalXp;
-	public int[] xpranges;
+	
+	
+	
+	public Skills()
+	{
+		skills = new ArrayList<Skill>();
+	}
+	
+	public void addSkill(SkillType name, int xp, int level)
+	{
+		Skill s = new Skill(name, xp, level);
+		skills.add(s);
+	}
 
 }
