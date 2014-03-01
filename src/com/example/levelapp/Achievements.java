@@ -19,6 +19,8 @@ public class Achievements
 	// addAcheivement
 	public void addAchievement(ArrayList<Achievement> list, String name, String description,int xp, int ap, String[] conditions)
 	{
+		if (checkExists(name) == true)
+		{return;}
 		Achievement newAchievement = new Achievement(name, description, xp, ap, conditions);
 		list.add(newAchievement);
 	}

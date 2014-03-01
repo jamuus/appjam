@@ -28,9 +28,15 @@ public class Skill
 	}
 	
 	// completeAction - completes action
-	public void completeAction(Action action)
+	private void completeAction(Action action)
 	{
 		xp = xp + action.xp;
+		
+		
+	}
+	
+	private void getLevel()
+	{
 		
 	}
 	
