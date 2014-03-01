@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         
     }
     
-    setupEventListeners()
+    private void setupEventListeners()
     {
     	ImageButton toDoList = (ImageButton)findViewById(R.id.toDoList);
         toDoList.setOnClickListener(new View.OnClickListener()
