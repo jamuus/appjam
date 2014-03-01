@@ -12,6 +12,7 @@ public class Skill
 	public int xp;
 	public int level;
 	public ArrayList<Action> actions;
+	public LevelBoundaries levelBounds = new LevelBoundaries();
 
 	public Skill(SkillType name, int xp)
 	{
@@ -40,7 +41,7 @@ public class Skill
 		
 	}
 	
-	private void getLevel(int xp)
+	public void getLevel(int xp)
 	{
 		level = levelBounds.getLevel(xp);
 	}
