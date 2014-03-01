@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
         });
         
         save();
+        
+        
     }
 
     void save() {
