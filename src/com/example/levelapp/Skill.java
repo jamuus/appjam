@@ -8,7 +8,8 @@ public class Skill
 	public String name;
 	public int xp;
 	public int level;
-	public ArrayList<Action> actions; 
+	public ArrayList<Action> actions;
+	public LevelBoundaries levelBounds = new LevelBoundaries();
 
 	// skill Constructor
 	public void initialiseAction()
@@ -26,6 +27,7 @@ public class Skill
 	public void completeAction(Action action)
 	{
 		xp = xp + action.xp;
+		
 	}
 	
 	// updateSkill - updates skill Values
