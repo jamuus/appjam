@@ -5,10 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
-import org.json.JSONArray;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -27,13 +24,14 @@ public class SaveGame {
 	
 	void readSave(){
 		//read from save, write/create About
-		profile.about = new About(
-				save.getString("Name", ""),
-				save.getString("Name", ""),
-				save.getInt("CharacterLevel", 0),
-				save.getInt("XP", 0),
-				save.getInt("AP", 0)
-				);
+		About about = profile.about;
+		about.name = save.getString("Name", "");
+		about.bio = save.getString("Bio", "");
+		about.characterLevel = save.getInt("CharacterLevel", 0);
+		about.xp = save.getInt("XP", 0);
+		about.ap = save.getInt("AP", 0);
+		
+		//Set achievements by getting list of done achievement names, and altering lists
 		Set<String> doneAchievs = save.getStringSet("list", new HashSet<String>());
 		Achievements a = profile.chievs;
 		
