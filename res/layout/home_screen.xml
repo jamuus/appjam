@@ -75,7 +75,7 @@
         android:textSize="30sp" />
 	
 	<ImageButton android:contentDescription="@string/description"
-        android:id="@+id/toDoList"
+        android:id="@+id/toDoList1"
         android:layout_width="576dp"
         android:layout_height="80dp"
         android:adjustViewBounds="true"
@@ -92,8 +92,8 @@
         android:adjustViewBounds="true"
         android:maxHeight="80dp"
         android:maxWidth="18dp"
-        android:layout_alignRight="@+id/toDoList"
-        android:layout_below="@+id/toDoList"
+        android:layout_alignRight="@+id/toDoList1"
+        android:layout_below="@+id/toDoList1"
         android:layout_marginTop="80dp"
         android:background="@drawable/achievements" />
 	
