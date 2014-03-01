@@ -1,6 +1,9 @@
 package com.example.levelapp;
 
+import java.sql.Date;
 import java.util.ArrayList;
+
+import com.example.levelapp.Difficulty;
 
 public class Skill
 {
@@ -8,7 +11,8 @@ public class Skill
 	public String name;
 	public int xp;
 	public int level;
-	public ArrayList<Action> actions; 
+	public ArrayList<Action> actions;
+	public LevelBoundaries levelBounds = new LevelBoundaries();
 
 	// skill Constructor
 	public void initialiseAction()
@@ -17,8 +21,9 @@ public class Skill
 	}
 	
 	// addAction - adds new action to the list
-	public void addAction(Action action)
+	public void addAction(String name, int xp, ArrayList<String> skills, Difficulty diff, Date deadline, int repeatDays)
 	{
+		Action action = new Action(name, xp, skills, diff, deadline, repeatDays);
 		actions.add(action);
 	}
 	
@@ -26,6 +31,7 @@ public class Skill
 	public void completeAction(Action action)
 	{
 		xp = xp + action.xp;
+		
 	}
 	
 	// updateSkill - updates skill Values
