@@ -8,7 +8,7 @@ import com.example.levelapp.Difficulty;
 public class Skill
 {
 	
-	public String name;
+	public SkillType name;
 	public int xp;
 	public int level;
 	public ArrayList<Action> actions;
@@ -31,13 +31,13 @@ public class Skill
 	private void completeAction(Action action)
 	{
 		xp = xp + action.xp;
-		
+		getLevel(xp);
 		
 	}
 	
-	private void getLevel()
+	private void getLevel(int xp)
 	{
-		
+		level = levelBounds.getLevel(xp);
 	}
 	
 	// updateSkill - updates skill Values
