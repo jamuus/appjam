@@ -15,7 +15,7 @@ public class Skills
 		skills = new ArrayList<Skill>();
 	}
 	
-	public void addSkill(String name, int xp, int level)
+	public void addSkill(SkillType name, int xp, int level)
 	{
 		Skill s = new Skill(name, xp, level);
 		skills.add(s);
