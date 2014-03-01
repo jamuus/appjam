@@ -17,11 +17,11 @@ public class Achievements
 		goals = new ArrayList<Achievement>();
 	}
 	// addAcheivement
-	public void addAchievement(ArrayList<Achievement> list, String name, String description,int xp, int ap, ArrayList<Condition> conditions)
+	public void addAchievement(ArrayList<Achievement> list, String name, SkillType skill, String description,int xp, int ap, ArrayList<Condition> conditions)
 	{
 		if (checkExists(name) == true)
 		{return;}
-		Achievement newAchievement = new Achievement(name, description, xp, ap, conditions);
+		Achievement newAchievement = new Achievement(name, skill, description, xp, ap, conditions);
 		list.add(newAchievement);
 	}
 	
@@ -71,15 +71,22 @@ public class Achievements
 		doneAchievs.add(achievement);
 		updateAP(ap, achievement.ap);
 		goals.remove(achievement);
-		
 	}
 	// removeAchievs
 	public void removeAchievs(Achievement achievement)
 	{
-		
+		Skills skills = new Skills();
 		doneAchievs.add(achievement);
 		updateAP(ap, achievement.ap);
 		goals.remove(achievement);
+		for (Skill skill : skills.returnSkills())
+		{
+			if (skill.name.equals(achievement.skill))
+			{
+				skill.xp = skill.xp + achievement.xp;
+				skill.getLevel(skill.xp);
+			}
+		}
 		
 		
 	}

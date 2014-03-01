@@ -7,13 +7,13 @@ public class Action
 {
 	public String name;
 	public int xp;
-	ArrayList<String> skills;
+	public SkillType skill;
 	
 	public Date deadline;
 	public int repeatDays;
 	public Difficulty diff;
 	
-	public Action(String name, int xp, ArrayList<String> skills, Difficulty diff, Date deadline, int repeatDays)
+	public Action(String name, int xp, SkillType skill, Difficulty diff, Date deadline, int repeatDays)
 	{
 		this.name = name;
 		this.xp = xp;
