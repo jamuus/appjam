@@ -32,13 +32,15 @@ public class Achievement
 	{
 		for (Condition condition : conditions)
 		{	
-		checkCondition(condition)
-		return true;
+		if (checkCondition(condition) != true);
+			return false;
 		}
+		return true;
 	}
 	
 	public Boolean checkCondition(Condition condition)
 	{
-		return false
+		condition.skill
+		return false;
 	}
 }
