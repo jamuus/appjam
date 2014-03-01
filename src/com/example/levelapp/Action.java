@@ -4,12 +4,9 @@ import java.sql.Date;
 
 public class Action
 {
-	public String actionname;
-	public int skillval;
-	public enum SkillType
-	{
-		// TODO
-	}
+	public String name;
+	public int xp;
+	ArrayList<String> skill
 	public enum difficulty
 	{
 		easy,
@@ -19,6 +16,16 @@ public class Action
 	}
 	
 	public Date deadline;
-	public int repetedays;
+	public int repeatDays;
+	
+	public Action(String name, int xp, ArrayList<String> skill, difficulty diff, Date deadline, int repeatDays)
+	{
+		this.name = name;
+		this.xp = xp;
+		this.skill = skill;
+		this.diff = diff;
+		this.deadline = deadline;
+		this.repeatDays = repeatDays;
+	}
 	
 }

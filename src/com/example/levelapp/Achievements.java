@@ -24,7 +24,7 @@ public class Achievements
 	}
 	
 	// checkDone - checks if Achievement is completed
-	private Boolean checkDone(String name)
+	public Boolean checkDone(String name)
 	{
 		
 		
@@ -73,13 +73,19 @@ public class Achievements
 		
 	}
 	// removeAchievs
-	private void removeAchievs(Achievement achievement)
+	public void removeAchievs(Achievement achievement)
 	{
+		
 		doneAchievs.add(achievement);
 		updateAP(ap, achievement.ap);
 		goals.remove(achievement);
 		
+		
 	}
-	//getXP - gets xp from
+	//getXP - gets xp from Achievement
+	public int getXP(Achievement achievement) //!!!!!!!!! get it to work
+	{
+		return achievement.xp;
+	}
 	// updateLists
 }
