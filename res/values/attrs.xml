@@ -1,0 +1,13 @@
+<resources>
+ 
+    <attr name="fontStyle" format="enum">
+        <enum name="StrangeMIX" value="0" />
+        <enum name="StrangeNARROW" value="1" />
+        <enum name="StrangeWIDE" value="2" />
+    </attr>
+ 
+    <declare-styleable name="Fonts">
+        <attr name="fontStyle" />
+    </declare-styleable>
+ 
+</resources>
