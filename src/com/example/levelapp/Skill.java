@@ -1,6 +1,9 @@
 package com.example.levelapp;
 
+import java.sql.Date;
 import java.util.ArrayList;
+
+import com.example.levelapp.Action.difficulty;
 
 public class Skill
 {
@@ -18,8 +21,9 @@ public class Skill
 	}
 	
 	// addAction - adds new action to the list
-	public void addAction(Action action)
+	public void addAction(String name, int xp, ArrayList<String> skills, difficulty diff, Date deadline, int repeatDays)
 	{
+		action =
 		actions.add(action);
 	}
 	
