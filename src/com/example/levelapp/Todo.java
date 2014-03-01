@@ -7,7 +7,7 @@ import com.example.levelapp.Action.difficulty;
 
 public class Todo
 {
-	public ArrayList<Action> actions;
+	private ArrayList<Action> actions;
 	
 	public Todo()
 	{
@@ -18,6 +18,11 @@ public class Todo
 	{
 		Action a = new Action(name, xp, skills, diff, deadline, repeatDays);
 		actions.add(a);
+	}
+	
+	public ArrayList<Action> getActions()
+	{
+		return actions;
 	}
 	
 }
