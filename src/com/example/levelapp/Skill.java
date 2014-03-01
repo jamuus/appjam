@@ -27,9 +27,9 @@ public class Skill
 //	}
 	
 	// addAction - adds new action to the list
-	public void addAction(String name, int xp, ArrayList<String> skills, Difficulty diff, Date deadline, int repeatDays)
+	public void addAction(String name, int xp, SkillType skill, Difficulty diff, int repeatDays)
 	{
-		Action action = new Action(name, xp, skills, diff, deadline, repeatDays);
+		Action action = new Action(name, xp, skill, diff, repeatDays);
 		actions.add(action);
 	}
 	
