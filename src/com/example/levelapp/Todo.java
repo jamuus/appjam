@@ -14,9 +14,9 @@ public class Todo
 		actions = new ArrayList<Action>();
 	}
 	
-	public void addAction(String name, int xp, ArrayList<String> skills, Difficulty diff, Date deadline, int repeatDays)
+	public void addAction(String name, int xp, SkillType skill, Difficulty diff, int repeatDays)
 	{
-		Action a = new Action(name, xp, skills, diff, deadline, repeatDays);
+		Action a = new Action(name, xp, skill, diff, repeatDays);
 		actions.add(a);
 	}
 	
