@@ -12,6 +12,7 @@ public class Skill
 	public int xp;
 	public int level;
 	public ArrayList<Action> actions;
+	public LevelBoundaries levelBounds = new LevelBoundaries();
 
 	public Skill(SkillType name, int xp)
 	{
@@ -26,9 +27,9 @@ public class Skill
 //	}
 	
 	// addAction - adds new action to the list
-	public void addAction(String name, int xp, ArrayList<String> skills, Difficulty diff, Date deadline, int repeatDays)
+	public void addAction(String name, int xp, SkillType skill, Difficulty diff, int repeatDays)
 	{
-		Action action = new Action(name, xp, skills, diff, deadline, repeatDays);
+		Action action = new Action(name, xp, skill, diff, repeatDays);
 		actions.add(action);
 	}
 	
@@ -40,7 +41,7 @@ public class Skill
 		
 	}
 	
-	private void getLevel(int xp)
+	public void getLevel(int xp)
 	{
 		level = levelBounds.getLevel(xp);
 	}
