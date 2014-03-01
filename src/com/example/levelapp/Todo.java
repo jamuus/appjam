@@ -25,4 +25,19 @@ public class Todo
 		return actions;
 	}
 	
+	public void completeAction(Action action)
+	{
+		actions.remove(action);
+	}
+	
+	public void completeAction(String action)
+	{
+		for(Action a : actions)
+		{
+			if(a.name == action)
+				actions.remove(a);
+				
+		}
+	}
+	
 }
