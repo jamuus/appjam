@@ -1,6 +1,6 @@
 package com.example.levelapp;
 
-import java.util.ArrayList
+import java.util.ArrayList;
 
 public class Skill
 {
@@ -17,9 +17,9 @@ public class Skill
 	}
 	
 	// addAction - adds new action to the list
-	public void addAction()
+	public void addAction(Action action)
 	{
-		actions.add(Action action);
+		actions.add(action);
 	}
 	
 	// completeAction - completes action
