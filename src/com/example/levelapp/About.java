@@ -6,5 +6,6 @@ public class About
 	public String bio;
 	public int characterLevel;
 	public int xp;
+	public int ap;
 	
 }
