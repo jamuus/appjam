@@ -2,8 +2,13 @@ package com.example.levelapp;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+
+import org.json.JSONArray;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -29,9 +34,21 @@ public class SaveGame {
 				save.getInt("XP", 0),
 				save.getInt("AP", 0)
 				);
-		//Retrieve the values
-		Set<String> set = new HashSet<String>();
-		set = save.getStringSet("key", null);
+		Set<String> doneAchievs = save.getStringSet("list", new HashSet<String>());
+		Achievements a = profile.chievs;
+		
+		for(int i = 0; i < a.achievs.size(); i++){
+			if(doneAchievs.contains(a.achievs.get(i).name)){
+				a.doneAchievs.add(a.achievs.get(i));
+				a.achievs.remove(a.achievs.get(i));
+			}
+		}
+		for(int i = 0; i < a.goals.size(); i++){
+			if(doneAchievs.contains(a.goals.get(i).name)){
+				a.doneAchievs.add(a.goals.get(i));
+				a.goals.remove(a.goals.get(i));
+			}
+		}
 	}
 	
 	void writeSave(){
@@ -42,11 +59,13 @@ public class SaveGame {
 		save.edit().putInt("XP", profile.about.xp);
 		save.edit().putInt("AP", profile.about.ap);
 
-		//save achievementList
-	    JSONArray gson = new Gson();
-	    String json = gson.toJson("MyObject");
-	    prefsEditor.putString("MyObject", json);
+		//save achievements
+		Set<String> achievements = new HashSet<String>();
+		for(Achievement a : profile.chievs.doneAchievs)
+			achievements.add(a.name);
+		save.edit().putStringSet("doneAchievs", achievements);
 		
 		save.edit().commit();
 	}
+	
 }
