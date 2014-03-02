@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     
     private void setupEventListeners()
     {
-    	ImageButton toDoList = (ImageButton)findViewById(R.id.toDoList);
+    	ImageButton toDoList = (ImageButton)findViewById(R.id.toDoList1);
         toDoList.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
             }
         });
         
-        ImageButton profileScreen = (ImageButton)findViewById(R.id.persona);
+        ImageButton profileScreen = (ImageButton)findViewById(R.id.avatar);
         profileScreen.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
