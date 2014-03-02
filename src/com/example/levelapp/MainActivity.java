@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
         });
         
         ImageButton profileScreen = (ImageButton)findViewById(R.id.persona);
-        skeelz.setOnClickListener(new View.OnClickListener()
+        profileScreen.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {

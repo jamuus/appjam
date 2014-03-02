@@ -27,13 +27,13 @@ public class SaveGame {
 	
 	void readSave(){
 		//read from save, write/create About
-		profile.about = new About(
-				save.getString("Name", ""),
-				save.getString("Name", ""),
-				save.getInt("CharacterLevel", 0),
-				save.getInt("XP", 0),
-				save.getInt("AP", 0)
-				);
+//		profile.about = new About(
+//				save.getString("Name", ""),
+//				save.getString("Name", ""),
+//				save.getInt("CharacterLevel", 0),
+//				save.getInt("XP", 0),
+//				save.getInt("AP", 0)
+//				);
 		Set<String> doneAchievs = save.getStringSet("list", new HashSet<String>());
 		Achievements a = profile.chievs;
 		

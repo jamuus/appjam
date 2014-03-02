@@ -12,10 +12,6 @@
     <string name="level">Level: </string>
     <string name="apoints">Achievement Points: </string>
     <string name="title_activity_profile_screen">ProfileScreen</string>
-    <string name="app_name">HackLife</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="description">Hello world!</string>
     <string name="back_button">BACK TO MENU</string>
     <string name="profile">PROFILE: </string>
     <string name="name_label">NAME: </string>
