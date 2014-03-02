@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    <RelativeLayout android:id="@+id/leftLayout"
+        android:layout_width="640dp"
+    	android:layout_height="800dp" >
+    
+		<!-- <TextView android:id="@+id/ProfileLabelImg"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_alignParentTop="true"
+    	    android:drawableBottom="5dp"
+    	    android:drawableLeft="256dp"
+    	    android:drawableTop="128dp"
+    	    android:gravity="center"
+    	    android:text="@string/profile"
+    	    android:textColor="#f16766"
+    	    android:textSize="80sp" /> -->
+
+		<TextView
+    	    android:id="@+id/ExpLabel"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/AchievementsLabel"
+    	    android:layout_below="@id/AchievementsLabel"
+    	    android:drawablePadding="10dp"
+    	    android:gravity="center_vertical"
+    	    android:text="@string/xp_label"
+    	    android:textAllCaps="true"
+    	    android:textColor="#f16766"
+    	    android:textSize="30sp" />
+
+    	<TextView
+    	    android:id="@+id/NameLabel"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/back_button"
+    	    android:layout_below="@+id/ProfileLabelImg"
+    	    android:drawablePadding="30dp"
+    	    android:gravity="center_vertical"
+    	    android:text="@string/name_label"
+    	    android:textAllCaps="true"
+    	    android:textColor="#f16766"
+    	    android:textSize="30sp" />
+
+    	<TextView
+    	    android:id="@+id/AchievementsLabel"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/NameLabel"
+    	    android:layout_below="@+id/NameLabel"
+    	    android:drawablePadding="10dp"
+    	    android:gravity="center_vertical"
+    	    android:text="@string/achievements_label"
+    	    android:textAllCaps="true"
+    	    android:textColor="#f16766"
+    	    android:textSize="30sp" />
+
+    	<TextView
+    	    android:id="@+id/LevelLabel"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/ExpLabel"
+    	    android:layout_below="@+id/ExpLabel"
+    	    android:drawablePadding="10dp"
+    	    android:gravity="center_vertical"
+    	    android:text="@string/level_label"
+    	    android:textAllCaps="true"
+    	    android:textColor="#f16766"
+    	    android:textSize="30sp" />
+
+    	<TextView
+    	    android:id="@+id/BioLabel"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignLeft="@+id/LevelLabel"
+    	    android:layout_below="@+id/LevelLabel"
+    	    android:drawablePadding="10dp"
+    	    android:gravity="center_vertical"
+    	    android:text="@string/bio_label"
+    	    android:textAllCaps="true"
+    	    android:textColor="#f16766"
+    	    android:textSize="30sp" /><ImageButton android:id="@+id/back_button" android:layout_width="320dp" android:layout_height="96dp" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_marginBottom="30dp" android:layout_marginLeft="30dp" android:adjustViewBounds="true" android:background="@drawable/back_button" android:contentDescription="@string/back_button" />
+
+    	    <TextView
+    	        android:id="@+id/ProfileLabelImg"
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="wrap_content"
+    	        android:layout_alignParentLeft="true"
+    	        android:layout_alignParentTop="true"
+    	        android:gravity="center"
+    	        android:text="@string/profile"
+    	        android:textColor="#f16766"
+    	        android:textSize="80sp" />
+    	
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/rightLayout"
+        android:layout_width="640dp"
+    	android:layout_height="800dp"
+    	android:layout_toRightOf="@id/leftLayout"
+    	android:background="#f16766" >
+
+    	<!-- <ImageView android:contentDescription="@string/description"
+        	android:id="@+id/Photo"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:adjustViewBounds="true"
+        	android:maxHeight="300dp"
+        	android:maxWidth="300dp"
+        	android:scaleType="fitXY"
+        	android:layout_toRightOf="@id/button1"
+        	android:src="@drawable/jpeg" /> -->
+
+		<ImageButton
+		    android:id="@+id/edit_button"
+		    android:layout_width="320dp"
+		    android:layout_height="96dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginBottom="30dp"
+		    android:layout_marginLeft="30dp"
+		    android:adjustViewBounds="true"
+		    android:background="@drawable/edit_button"
+		    android:contentDescription="@string/edit_button" />
+
+	</RelativeLayout>
+    
+   
+    
+</RelativeLayout>
