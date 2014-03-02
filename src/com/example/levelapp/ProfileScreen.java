@@ -16,6 +16,11 @@ public class ProfileScreen extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		//getMenuInflater().inflate(R.menu.profile_screen, menu);
+		
+		Bundle extras = getIntent().getExtras();
+		String data = getIntent().getStringExtra("String");
+		
+		
 		return true;
 	}
 
