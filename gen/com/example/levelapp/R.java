@@ -38,9 +38,11 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
         public static final int jpeg=0x7f020003;
         public static final int orange=0x7f020004;
-        public static final int profile=0x7f020005;
-        public static final int skills=0x7f020006;
-        public static final int todo=0x7f020007;
+        public static final int plastic_surgery_nuttob=0x7f020005;
+        public static final int profile=0x7f020006;
+        public static final int purple_button=0x7f020007;
+        public static final int skills=0x7f020008;
+        public static final int todo=0x7f020009;
     }
     public static final class id {
         public static final int StrangeMIX=0x7f040000;
